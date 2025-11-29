@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Procedure - Bevel Protractor Virtual Lab</title>
+<link rel="stylesheet" href="style.css">
+<script>
+function calculateAngle() {
+  const mainScale = parseFloat(document.getElementById("main").value);
+  const vernierReading = parseFloat(document.getElementById("vernier").value);
+  const vernierLeastCount = 5 / 60; // 5 minutes = 0.0833°
+  if (isNaN(mainScale) || isNaN(vernierReading)) {
+    alert("Please enter valid readings.");
+    return;
+  }
+  const totalAngle = mainScale + (vernierReading * vernierLeastCount);
+  document.getElementById("result").innerHTML =
+    `Measured Angle = <b>${totalAngle.toFixed(2)}°</b>`;
+}
+</script>
+</head>
+<body>
+<header>
+  <h1>Apparatus & Procedure</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="theory.html">Theory</a>
+    <a href="procedure.html">Procedure</a>
+    <a href="quiz.html">Quiz</a>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>Apparatus Required</h2>
+    <ul>
+      <li>Bevel protractor</li>
+      <li>Triangular bar (workpiece)</li>
+      <li>Surface plate</li>
+      <li>Spirit level</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Step-by-Step Procedure</h2>
+    <ol>
+      <li>Clean the bevel protractor and the triangular bar.</li>
+      <li>Place the triangular bar on the surface plate.</li>
+      <li>Align the base of the bevel protractor with one side of the bar.</li>
+      <li>Rotate the adjustable blade to make contact with the inclined surface.</li>
+      <li>Lock the blade and read the main scale reading (MSR).</li>
+      <li>Note the vernier scale reading (VSR) that coincides with a main scale division.</li>
+      <li>Calculate the total angle using the formula:  
+          <strong>Total Angle = MSR + (VSR × Least Count)</strong></li>
+    </ol>
+
+    <div class="procedure-im
+      <img src="bevel_setup1.png" alt="Bevel Protractor Setup 1
+      <img src="bevel_setup2.png" alt="Bevel Protractor Setup 2
+    </div>
+  </section>
+
+  <section class="calculator">
+    <h2>Interactive Angle Calculator</h2>
+    <label>Main scale reading (°): <input type="number" id="main" placeholder="e.g. 25"></label><br><br>
+    <label>Vernier reading (divisions): <input type="number" id="vernier" placeholder="e.g. 6"></label><br><br>
+    <button onclick="calculateAngle()">Calculate</button>
+    <p id="result"></p>
+  </section>
+</main>
+
+<footer>
+  © 2025 Virtual Lab | Measurement of Angles using Bevel Protractor
+</footer>
+</body>
+</html>
