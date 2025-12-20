@@ -2,43 +2,35 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bevel Protractor Virtual Lab - Home</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Wire Lab</title>
+    <link rel="stylesheet" href="intro.css">
 </head>
 
 <body>
-  <header>
-    <h1>Virtual Lab: Measurement of Angles of a Triangular Bar using Bevel Protractor</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="theory.html">Theory</a>
-      <a href="procedure.html">Procedure</a>
-      <a href="quiz.html">Quiz</a>
-    </nav>
-  </header>
 
-  <main>
-    <section>
-      <h2>Aim</h2>
-      <p>To measure the angle of a triangular bar accurately using a bevel protractor.</p>
-    </section>
+    <header class="intro-header">
+        <div id="top-bar-title" class="header-title">Loading...</div>
 
-    <section>
-      <h2>Introduction</h2>
-      <p>
-        A bevel protractor is a precision instrument used to measure and set angles. It consists
-        of a base, a circular protractor dial graduated in degrees, and a vernier scale that allows
-        readings up to minutes of a degree. It is commonly used in tool rooms and workshops to
-        measure the angle between two surfaces of a workpiece.
-      </p>
-    </section>
-  </main>
+        <div class="header-actions">
+            <button class="header-btn home-btn" onclick="window.location.href='/home/'">Home</button>
 
-  <footer>
-    © 2025 Virtual Lab | Measurement of Angles using Bevel Protractor
-  </footer>
+            <button id="action-btn" class="header-btn">Loading...</button>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        <div class="info-card">
+            <h1 id="main-title">Loading...</h1>
+            <hr class="divider">
+            <div id="main-desc" class="card-body">Loading...</div>
+        </div>
+    </main>
+
+    <footer id="intro-footer" class="intro-footer"></footer>
+
+    <script type="module" src="intro/intro.js"></script>
 </body>
 
 </html>
