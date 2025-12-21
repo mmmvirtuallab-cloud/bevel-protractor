@@ -2,10 +2,10 @@
 
 export const INTRO_CONTENT = {
     // Top Blue Bar Text
-    headerTitle: "Bevel Protractor Experiment",
+    headerTitle: "Bevel Protractor",
     
     // Button Text & Link
-    buttonLabel: "Go to Experiment",
+    buttonLabel: "Experiment",
     buttonLink: "bevelprotractor.html",
 
     // Main Page Content
